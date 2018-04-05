@@ -1,3 +1,5 @@
 gem 'capybara'
 gem 'rspec'
 gem 'sinatra'
+gem 'rack-test'
+gem 'shotgun'
