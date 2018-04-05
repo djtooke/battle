@@ -1,6 +1,14 @@
-feature 'show testing is working on the home page' do
-  scenario 'sentence appears' do
-    visit('/')
-    expect(page).to have_content("Testing infrastructure working!")
+feature 'allow players to input names and display them' do
+  scenario 'fillable form appears' do
+    visit ('/')
+    expect(page).to have_content ("Please enter your name")
   end
+
+  scenario 'form accepts name and displays it' do
+    visit ('/')
+    fill_in('player1_name', :with => 'Guybrush Threepwood' )
+    find_button('Submit').click
+    expect(page).to have_content ("Guybrush Threepwood")
+  end
+
 end
