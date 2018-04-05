@@ -17,3 +17,12 @@ feature 'allow players to have 100 HP to start with' do
     expect(page).to have_content ("Player 1 HP: 100")
   end
 end
+
+feature 'allow users to attack each other' do
+  scenario 'Player 1 should be able to attack player 2' do
+    visit '/'
+    sign_in_and_play
+    find_button('Attack Elaine Marley').click
+    expect(page).to have_content ('Player 2 HP: 80')
+  end
+end
