@@ -3,6 +3,10 @@
 <h2>Player 1 HP: <%=@player1_HP%><br>
   Player 2 HP: <%=@player2_HP%></h2>
 
+<form method="post" action="/attack_player1">
+    <button type="submit">Attack <%=@player1_name%> </button>
+</form>
+
 <form method="post" action="/attack_player2">
     <button type="submit">Attack <%=@player2_name%> </button>
 </form>

@@ -29,5 +29,10 @@ class Battle < Sinatra::Base
     redirect to('/play')
   end
 
+  post '/attack_player1' do
+    session[:player1_HP] -= 20
+    redirect to('/play')
+  end
+
   run! if app_file == $0
 end
